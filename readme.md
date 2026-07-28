@@ -1,8 +1,9 @@
+
 # Niko Mount
 
 A smart random mount summoner for **World of Warcraft: Wrath of the Lich King (3.3.5a)**. One keybind mounts you up — the addon automatically picks a flying or ground mount based on where you are, including tricky spots like Dalaran and Wintergrasp.
 
-<!-- SCREENSHOT: drag an image here in the GitHub web editor; it will auto-upload to a github.com/user-attachments URL. Then replace this comment with the generated ![NikoMount](...) block. -->
+<img width="422" height="521" alt="NikoMount" src="https://github.com/user-attachments/assets/f752ed20-a9bb-4c10-9c7f-c931d762ee30" />
 
 ---
 
