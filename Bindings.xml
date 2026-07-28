@@ -1,4 +1,4 @@
 <Bindings>
-    <Binding name="CLICK SausageMountCastBtn:LeftButton" header="SAUSAGE_HEADER">
+    <Binding name="CLICK NikoMountCastBtn:LeftButton" header="NIKO_MOUNT_HEADER">
     </Binding>
 </Bindings>

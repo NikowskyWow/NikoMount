@@ -1,9 +1,0 @@
-## Interface: 30300
-## Title: |cffeda55fSausage|r Mount
-## Notes: Random mount summoner by Sausage Party.
-## Author: Sausage Party
-## Version: 1.1.9
-## SavedVariables: SausageMountDB
-
-Core.lua
-Bindings.xml

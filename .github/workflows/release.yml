@@ -1,4 +1,4 @@
-name: Release Sausage Mount
+name: Release Niko Mount
 
 on:
   push:
@@ -25,18 +25,23 @@ jobs:
       - name: Update Project Version
         run: |
           # Nájde riadok "## Version: ..." a nahradí ho verziou z tagu
-          sed -i "s/^## Version: .*/## Version: ${{ env.VERSION }}/" SausageMount.toc
-          sed -i "s/local SAUSAGE_VERSION = \".*\"/local SAUSAGE_VERSION = \"${{ env.VERSION }}\"/" Core.lua 
+          sed -i "s/^## Version: .*/## Version: ${{ env.VERSION }}/" NikoMount.toc
+          sed -i "s/local NIKO_VERSION = \".*\"/local NIKO_VERSION = \"${{ env.VERSION }}\"/" Core.lua
           sed -i "s/^Version: .*/Version: ${{ env.VERSION }}/" readme.md
       - name: Commit and Push Version Update
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Bump version to ${{ env.VERSION }}"
-          
-          # Zistíme názov default vetvy (zvyčajne main alebo master) a pushneme zmenu
-          DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
-          git push origin HEAD:$DEFAULT_BRANCH || echo "Warning: Could not push to $DEFAULT_BRANCH. Continuing with release."
+
+          # Commit iba ak sa nieco zmenilo (ak verzia uz sedi s tagom, nie je co commitnut)
+          if git diff --quiet; then
+            echo "Version already matches tag - nothing to commit."
+          else
+            git commit -am "Bump version to ${{ env.VERSION }}"
+            # Zistíme názov default vetvy (zvyčajne main alebo master) a pushneme zmenu
+            DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
+            git push origin HEAD:$DEFAULT_BRANCH || echo "Warning: Could not push to $DEFAULT_BRANCH. Continuing with release."
+          fi
 
       - name: Prepare Release ZIP
         run: |
