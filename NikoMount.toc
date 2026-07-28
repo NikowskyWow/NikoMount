@@ -2,7 +2,7 @@
 ## Title: |cff33ff99Niko|r Mount
 ## Notes: Random mount summoner by Nikowsky.
 ## Author: Nikowsky (Kokotiar / Jebly)
-## Version: 1.1.9
+## Version: 1.2.0
 ## SavedVariables: NikoMountDB, SausageMountDB
 
 Core.lua

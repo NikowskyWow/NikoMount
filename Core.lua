@@ -2,7 +2,7 @@
 -- NIKO MOUNT - Pure Native Logic & Clean Macro
 -- =========================================================================
 
-local NIKO_VERSION = "1.1.9"
+local NIKO_VERSION = "1.2.0"
 local GITHUB_URL = "github.com/NikowskyWow/NikoMount/releases"
 
 _G["BINDING_HEADER_NIKO_MOUNT_HEADER"] = "|cff33ff99Niko Mount|r"

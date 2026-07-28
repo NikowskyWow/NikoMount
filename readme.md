@@ -60,4 +60,4 @@ Join our Discord for other addons, updates, bug reports, and suggestions:
 * **Tested On:** Warmane (Onyxia Realm)
 * **Author:** Nikowsky (Kokotiar / Jebly)
 
-Version: 1.1.9
+Version: 1.2.0
